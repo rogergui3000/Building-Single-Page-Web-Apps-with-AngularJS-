@@ -1,0 +1,71 @@
+@import url("//fonts.googleapis.com/css?family=Lobster");
+
+body {
+	margin-top: 50px;
+}
+
+.section-title, .navbar-brand {
+	font-family: 'Lobster', cursive;
+	font-weight: bold;
+	line-height: 1.1;
+	font-size: 26px;
+	margin-top: 0px;
+}
+
+.movie-container {
+	height: 250px;
+}
+
+.movie-thumb {
+	text-align: center;
+	color: black;
+}
+
+.movie-thumb h5 {
+	font-weight: bold;
+	margin-top: 0px;
+}
+
+.movie-thumb:hover {
+	text-decoration: none;
+	color: grey;
+}
+
+.thumbnail {
+	margin-bottom: 10px;
+	max-height: 200px;
+}
+
+.pagination {
+	float: right;
+	margin-right: 20px;
+}
+
+.moviedetails .poster {
+	float: left;
+	margin-right: 20px;
+}
+
+.moviedetails .movie-title {
+	font-family: 'Lobster', cursive;
+	font-size: 35px;
+	margin-top: 0px;
+}
+
+.moviedetails .btn-info {
+	margin-right: 5px;
+}
+
+.moviedetails .overview {
+	font-size: 17px;
+	margin: 15px 5% 15px 0px;
+} 
+
+.moviedetails .return-link {
+	float: right;
+}
+
+.genre-title {
+	text-align: right;
+	margin-bottom: 10px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="movieDB">
+  <head>
+    <meta charset="utf-8">
+    <title>AngularJS Movie Database</title>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="app.css">
+  </head>
+
+  <body>
+    <div class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <a href="#" class="navbar-brand">
+          <span class="glyphicon glyphicon-film"></span> MovieDB
+        </a>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <ng-view></ng-view>
+      </div>
+    </div>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="catalog/catalog.js"></script>
+    <script src="genre/genre.js"></script>
+    <script src="movie/movie.js"></script>
+    <script src="components/paginate/paginate-filter.js"></script>
+    <script src="components/movie/movie-service.js"></script>
+  </body>
+</html>

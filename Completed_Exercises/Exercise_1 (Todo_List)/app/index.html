@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>To-do List App</title>
+  <link rel="stylesheet" href="bootstrap.css"/>
+  <link rel="stylesheet" href="app.css"/>
+</head>
+
+<body ng-app="todoApp" ng-controller="todoController"  class="container">
+
+  <div class="row-fluid">
+
+    <div class="col-md-8 col-md-offset-2">
+      <div class="jumbotron">
+        <h1>What needs to be done?</h1>
+        <form ng-submit="addTodo()">
+          <div class="input-group input-group-lg">
+            <input type="text" ng-model="newTask" class="form-control input-lg"/>
+            <span class="input-group-btn">
+              <button type="submit" class="btn btn-default">Add Task</button>
+            </span>
+          </div>
+        </form>         
+      </div>
+
+      <div id="tasklist" class="list-group">
+        <div class="list-group-item task" ng-repeat="task in taskList">
+          <label class="description" ng-class="{strike: task.done}">
+            <input ng-model="task.done" type="checkbox">
+            {{task.description}}
+          </label>
+          <button ng-click="deleteTodo($index)" class="btn btn-primary btn-xs">Delete</button>
+        </div>
+      </div>
+
+      <span id="todo-count">
+        <h4>{{pendingCount}}
+          <ng-pluralize count="pendingCount" when="{ one: 'item left', other: 'items left' }"></ng-pluralize>
+          <button id="clearTasks" class="btn btn-default" ng-click="clearCompleted()" ng-show="pendingCount < taskList.length">Clear completed ({{taskList.length - pendingCount}})
+          </button>
+        </h4>
+      </span>
+
+    </div>
+
+  </div>
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="app.js"></script>
+  <script src="controllers.js"></script>
+</body>
+</html>

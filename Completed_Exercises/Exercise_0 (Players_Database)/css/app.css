@@ -1,0 +1,38 @@
+/* app css stylesheet */
+
+body {
+  background: #1B1E21;
+}
+
+.list-contaner {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  padding: 0;
+  margin: 0 auto;
+  max-width: 500px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 15px 15px;
+  overflow: hidden;
+}
+
+.list-contaner table {
+  margin: 0;
+}
+
+.list-contaner table .flag {
+  padding: 3px 15px;
+}
+
+.list-contaner table .header {
+  padding-left: 15px;
+  color: white;
+}
+.glyphicon.glyphicon-search {
+  float: right;
+  margin-top: 7px;
+  margin-right: 3%
+}
+
+.input-sm {
+  width: 84%;
+  float: left;
+}
